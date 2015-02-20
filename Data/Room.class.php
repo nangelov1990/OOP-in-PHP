@@ -1,10 +1,12 @@
 <?php
-namespace Data
+namespace Data;
 
 require_once("/Interface/iReservable.php");
 require_once("/Enumeration/Enumeration.php");
-use Interface;
+require_once("/HotelEsception/EHotelException.php");
+use Interface\Interface;
 use Enumeration;
+use HotelException;
 
 class Room implements iReservable
 {
@@ -46,7 +48,30 @@ class Room implements iReservable
 		return $this->$fieldName;
 	}
 
-	
+	public function isBooked(reservation $reservation)
+	{
+		foreach ($this->reservations as $bookedReservation) {
+			if ($reservation->startDate <= $bookedReservation->startDate && $reservation->endDate >= $bookedReservation->endDate) {
+				return true;				
+			}
+		}
+
+		return false;
+	}
+
+	public function addReservation(reservation $reservation)
+	{
+		if ($this->isBooked($reservation) == true) {
+			throw new EReservationException($reservation);
+		}
+
+		array_push($reservations, $reservation);
+	}
+
+	public function removeReservation($reservation)
+	{
+		unset($this->reservations[$reservation]);
+	}
 
 	public function __toString()
 	{

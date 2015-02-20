@@ -1,10 +1,10 @@
 <?php
-namespace HotelException
+namespace HotelException;
 
 class EReservationException extends Exception
 {
 	function __construct($paramName) {
-		parent::__construct("Reservation already exists in this period!", 1)
+		parent::__construct("Reservation already exists in this period: $paramName->startDate - $paramName->endDate", 1)
 	}
 }
 

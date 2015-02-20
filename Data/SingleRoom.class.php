@@ -1,15 +1,15 @@
 <?php
-namespace Data
+namespace Data;
 
-require_once("/Enumeration/Enumeration.php");
-use Interface;
+include("Room.class.php");
+include("./Enumeration/Enumeration.php");
 use Enumeration;
 
 class SingleRoom extends Room
 {
-	$singleRoomExtras = [
-		Extras::TV,
-		Extras::AirConditioner ];
+	// $singleRoomExtras = [
+	// 	Extras::TV,
+	// 	Extras::AirConditioner ];
 
 	function __construct(
 		$roomNumber,

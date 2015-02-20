@@ -1,5 +1,5 @@
 <?php
-namespace Data
+namespace Data;
 
 require_once("/HotelEsception/EHotelException.php");
 use HotelException;

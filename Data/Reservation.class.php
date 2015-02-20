@@ -1,5 +1,5 @@
 <?php
-namespace Data
+namespace Data;
 
 class Reservation
 {
@@ -31,5 +31,4 @@ class Reservation
 		return $reservationToString;
 	}
 }
-
 ?>

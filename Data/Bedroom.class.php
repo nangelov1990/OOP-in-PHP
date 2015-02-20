@@ -1,8 +1,7 @@
 <?php
-namespace Data
+namespace Data;
 
 require_once("/Enumeration/Enumeration.php");
-use Interface;
 use Enumeration;
 
 class Bedroom extends Room

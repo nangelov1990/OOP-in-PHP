@@ -1,5 +1,5 @@
 <?php
-namespace Enumeration
+namespace Enumeration;
 
 class RoomType {
 	const Standart = 1;

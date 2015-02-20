@@ -1,5 +1,5 @@
 <?php
-namespace Interface
+namespace Interface;
 
 interface iReservable {
 	function addReservation(reservation $resetvation);
